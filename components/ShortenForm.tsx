@@ -33,14 +33,14 @@ export default function ShortenForm() {
 
 
     return (
-        <div className="w-full max-w-lg bg-white p-6 rounded-xl border-2 shadow-lg">
+        <div className="bg-white p-15 rounded-4xl border-2 w-[50%]">
             <header className="mb-6">
                 <h1 className="font-bold text-2xl">Shorten a URL</h1>
-                <p className="text-neutral-500">
+                <p>
                     Enter a long URL to create a shorter, shareable link
                 </p>
             </header>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
                     <label htmlFor="url" className="text-lg">URL</label>
                     <div>
@@ -48,7 +48,7 @@ export default function ShortenForm() {
                             placeholder="https://example.com/very/long/url"
                             name="url"
                             type="url"
-                            className="w-full border px-3 py-2 rounded-md"
+                            className="w-[90%] border px-3 py-2 rounded-md"
                             required
                             value={url}
                             onChange={e => setUrl(e.target.value)}
@@ -64,7 +64,7 @@ export default function ShortenForm() {
                             placeholder="your-custom-alias"
                             name="alias"
                             type="text"
-                            className="w-48 border px-3 py-2 rounded-md"
+                            className=" w-[30%] border px-3 py-2 rounded-md"
                             required
                             value={alias}
                             onChange={e => setAlias(e.target.value)}
@@ -76,7 +76,7 @@ export default function ShortenForm() {
                 <button
                     type="submit"
                     disabled={loading}
-                    className="w-full text-white bg-emerald-500 hover:bg-emerald-400 transition-colors font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 my-2"
+                    className="w-full text-white bg-blue-500 hover:bg-blue-400 transition-colors font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 my-2"
                 >
                     {loading ? "Shortening..." : "Shorten"}
                     
